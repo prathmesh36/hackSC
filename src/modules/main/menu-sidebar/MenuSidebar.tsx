@@ -26,6 +26,11 @@ export const MENU: IMenuItem[] = [
     path: '/findShelters'
   },
   {
+    name: i18n.t('menusidebar.label.beAVounteer'),
+    icon: 'fas fa-wrench nav-icon',
+    path: '/beAVolunteer'
+  },
+  {
     name: i18n.t('menusidebar.label.findReliefTransportation'),
     icon: 'fas fa-wrench nav-icon',
     path: '/findReliefTransportation'
