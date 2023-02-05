@@ -1,8 +1,30 @@
 import {SmallBox} from '@app/components';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {ContentHeader} from '@components';
+import MyMap from '@app/pages/MapComponent';
+import instance from '@app/utils/axios';
 
 const Dashboard = () => {
+  const [shelterData, setShelterData] = useState([]);
+
+  const mapIsReadyCallback = (map) => {
+    //console.log(map);
+  };
+
+ const onShelterSearchSubmit = async (shelter:string)=>{
+    console.log("Hello")
+    setShelterData([]);
+    const response = await instance.get("/v1/user/getUser");
+    console.log("Response");
+    console.log(response);
+    setShelterData(response.data);
+  }
+
+  useEffect(()=>{
+      console.log("Hello")
+      onShelterSearchSubmit()
+  },[]);
+
   return (
     <div>
       <ContentHeader title="Disaster Management Home Page" />
@@ -29,10 +51,10 @@ const Dashboard = () => {
               <div className="small-box bg-success">
                 <div className="inner">
                   <h3>
-                    53<sup style={{fontSize: '20px'}}>%</sup>
+                    539
                   </h3>
 
-                  <p>Relief Effort Transportations</p>
+                  <p>Total Vacancy in Shelters</p>
                 </div>
                 <div className="icon">
                   <i className="ion ion-stats-bars" />
@@ -47,7 +69,7 @@ const Dashboard = () => {
                 <div className="inner">
                   <h3>44</h3>
 
-                  <p>User Registrations</p>
+                  <p>Rescue Transport Available</p>
                 </div>
                 <div className="icon">
                   <i className="ion ion-person-add" />
@@ -60,9 +82,9 @@ const Dashboard = () => {
             <div className="col-lg-3 col-6">
               <div className="small-box bg-danger">
                 <div className="inner">
-                  <h3>65</h3>
+                  <h3>63</h3>
 
-                  <p>Unique Visitors</p>
+                  <p>People SOSed</p>
                 </div>
                 <div className="icon">
                   <i className="ion ion-pie-graph" />
@@ -75,6 +97,13 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
+
+{/*       <ContentHeader title="People SOS Map" /> */}
+{/*       <section> */}
+{/*          <div className="card-body"> */}
+{/*             <MyMap markerData={shelterData} mapIsReadyCallback={mapIsReadyCallback} /> */}
+{/*          </div> */}
+{/*       </section> */}
     </div>
   );
 };

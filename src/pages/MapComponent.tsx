@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 
-
-
 const MyMap = (props) => {
 
     let [positions,setPositions] = useState([[[34, -118], "Default Name"]]);
 
-
     useEffect(()=>{
+         console.log("Props")
         console.log(props)
         let tempPosition = []
         for(let shelterData in props.markerData){
             console.log(shelterData)
-            tempPosition.push([[props.markerData[shelterData].locationlongitude,props.markerData[shelterData].locationlatitude],props.markerData[shelterData].street ])
+            console.log(props.markerData[shelterData])
+            tempPosition.push([[props.markerData[shelterData].locationlongitude,props.markerData[shelterData].locationlatitude],props.markerData[shelterData].street])
         }
         console.log(tempPosition)
         setPositions(tempPosition);

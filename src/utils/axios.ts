@@ -2,7 +2,7 @@ import axios, {AxiosRequestConfig} from 'axios';
 import store from '@store/store';
 import {logoutUser} from '@store/reducers/auth';
 
-const BASE_URL = `https://aefb-104-32-178-78.ngrok.io`
+const BASE_URL = `https://3b5f-104-32-178-78.ngrok.io`
 const intance = axios.create({
   baseURL: BASE_URL
 });
