@@ -56,7 +56,7 @@ const Shelter = () => {
             <div className="card-body">
               Search by zip code: 
               <input type="text" style={{marginLeft:"4px"}} onChange={(zipCode)=>{setZipCode(zipCode.target.value)}} value={zipCode}></input>
-              <button style={{marginLeft:"10px"}} onClick={()=>{onShelterSearchSubmit(zipCode)}}>Submit</button>
+              <button style={{marginLeft:"10px",background:"#343a40",color:"white"}} onClick={()=>{onShelterSearchSubmit(zipCode)}}>Submit</button>
             </div>
             <div className="card-body">
 

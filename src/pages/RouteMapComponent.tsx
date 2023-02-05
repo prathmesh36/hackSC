@@ -21,7 +21,7 @@ export default function App(props) {
     },[props.markerData]);
 
   return (
-    <MapContainer center={position} zoom={13} style={{ height: "100vh" }}>
+    <MapContainer center={position} zoom={13} style={{ height: "50vh",width:"80%" }}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

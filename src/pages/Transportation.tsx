@@ -51,7 +51,7 @@ const Transport = () => {
             <div className="card-body">
               Search by zip code: 
               <input type="text" style={{marginLeft:"4px"}} onChange={(zipCode)=>{setZipCode(zipCode.target.value)}} value={zipCode}></input>
-              <button style={{marginLeft:"10px"}} onClick={()=>{onTransportSearchSubmit(zipCode)}}>Submit</button>
+              <button style={{marginLeft:"10px",background:"#343a40",color:"white"}} onClick={()=>{onTransportSearchSubmit(zipCode)}}>Submit</button>
             </div>
             <div className="card-body">
               {transportData.map((eachTransportData) => (
