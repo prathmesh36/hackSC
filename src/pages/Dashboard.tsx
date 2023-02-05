@@ -98,12 +98,12 @@ const Dashboard = () => {
         </div>
       </section>
 
-{/*       <ContentHeader title="People SOS Map" /> */}
-{/*       <section> */}
-{/*          <div className="card-body"> */}
-{/*             <MyMap markerData={shelterData} mapIsReadyCallback={mapIsReadyCallback} /> */}
-{/*          </div> */}
-{/*       </section> */}
+      <ContentHeader title="People SOS Map" />
+      <section>
+         <div className="card-body">
+            <MyMap markerData={shelterData} mapIsReadyCallback={mapIsReadyCallback} />
+         </div>
+      </section>
     </div>
   );
 };

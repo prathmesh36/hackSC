@@ -19,6 +19,7 @@ import Profile from '@pages/profile/Profile';
 import PublicRoute from './routes/PublicRoute';
 import PrivateRoute from './routes/PrivateRoute';
 import BeAVolunteer from '@app/pages/BeAVolunteer';
+import TransportAdmin from '@app/pages/TransportAdmin';
 
 const App = () => {
   const windowSize = useWindowSize();
@@ -52,6 +53,7 @@ const App = () => {
             <Route path="/findShelters" element={<Shelter />} />
             <Route path="/findReliefTransportation" element={<Transport />} />
             <Route path="/offlineSMSService" element={<Shelter />} />
+            <Route path="/transportAdmin" element={<TransportAdmin />} />
             <Route path="/beAVolunteer" element={<BeAVolunteer />} />
             <Route path="/offlineBluetoothMeshService" element={<Shelter />} />
             <Route path="/profile" element={<Profile />} />

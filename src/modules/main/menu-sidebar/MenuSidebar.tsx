@@ -30,6 +30,11 @@ export const MENU: IMenuItem[] = [
     icon: 'fas fa-wrench nav-icon',
     path: '/beAVolunteer'
   },
+    {
+      name: i18n.t('menusidebar.label.transportAdmin'),
+      icon: 'fas fa-wrench nav-icon',
+      path: '/transportAdmin'
+    },
   {
     name: i18n.t('menusidebar.label.findReliefTransportation'),
     icon: 'fas fa-wrench nav-icon',

@@ -12,14 +12,14 @@ const MyMap = (props) => {
         for(let shelterData in props.markerData){
             console.log(shelterData)
             console.log(props.markerData[shelterData])
-            tempPosition.push([[props.markerData[shelterData].locationlongitude,props.markerData[shelterData].locationlatitude],props.markerData[shelterData].street])
+            tempPosition.push([[props.markerData[shelterData].sourcelongitude,props.markerData[shelterData].sourcelatitude],props.markerData[shelterData].street])
         }
         console.log(tempPosition)
         setPositions(tempPosition);
     },[props.markerData]);
 
     return (
-        <MapContainer style={{height:"500px", width:"100%"}} center={positions[0][0]} zoom={10} scrollWheelZoom={false}>
+        <MapContainer style={{height:"500px", width:"100%"}} center={positions[0] ? positions[0][0] : [34, -118]} zoom={10} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
